@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- jQuery API 참조 -->
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    <!-- 사용자 정의 스크립트 코드 블록 
+    <script>
+        function initPage($){
+            /*
+            var h1 = document.getElementById("hello");
+            
+            h1.style.color="#00f";
+            h1.style.backgroundColor="#d5d5d5";
+            h1.style.fontSize="50px";
+            h1.innerHTML = "Hello jQuery";
+            */
+
+
+            // var h1 = document.getElementById("hello");
+            var h1 = $("#hello");
+
+            // h1.innerHTML = "Hello jQuery";
+            h1.html("Hello jQuery");
+
+            /*
+                initPage에게 "$"는 객체(혹은 함수)가 파라미터로 전달되는데,
+                "$"는 jQuery의 모든 기능을 담고 있는 jQuery의 최상위 객체다.
+            */
+        }
+        function sayHello(){
+            alert("안녕하세요. jQuery!!!") // 메시지 출력
+        }
+
+        // body 태그의 onload 자바스크립트의 이벤트 함수를 호출하는 것과 같다.
+        jQuery(sayHello);
+        jQuery(initPage);
+
+    </script>
+    -->
+
+    <!--
+    <script>
+        jQuery(function($){
+            var h1 = $("#hello");
+            h1.html("Hello jQuery");
+        });
+
+    </script>
+    -->
+
+    <script>
+        // 페이지가 열리면서 자동 실행하는 기능
+        $(function(){
+            $("#hello").html("Hello jQuery");
+            alert($("#txt").html());
+        })
+
+    </script>
+
+</head>
+<body>
+    <h1 id="hello"></h1>
+    <p id="txt">안녕하세요. jQuery</p>
+</body>
+</html>

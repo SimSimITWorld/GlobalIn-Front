@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 요일의 이름을 저장하고 있는 배열 생성
+        var days = ["일", "월", "화","수","목","금","토"];
+
+        var mydate = new Date();
+
+        // 임의 날짜 값 설정
+
+        mydate.setYear(2022);
+        mydate.setMonth(11);
+        mydate.setDate(25);
+        mydate.setHours(17);
+        mydate.setMinutes(16);
+        mydate.setSeconds(30);
+
+
+
+
+
+        // 시스템에서 가져오기
+
+        var yy = mydate.getFullYear();
+        var mm = mydate.getMonth()+1;
+        var dd = mydate.getDate();
+
+
+        var i = mydate.getDay();
+        var day = days[i];
+
+        var hh = mydate.getHours();
+        var mi = mydate.getMinutes();
+        var ss = mydate.getSeconds();
+
+        var result = yy + "-" + mm + "-" + dd+" "+ day +"요일 " + hh + ":" + mi + ":" + ss;
+
+        document.write("<h1>"+ result +"</h1>")
+        document.write("<hr>")
+
+        var theday = new Date(2023, 0, 1);
+        var today = new Date();
+
+        var cnt = today.getTime() - theday.getTime();
+
+        var dday = Math.floor(cnt/(24*60*60*1000)); 
+
+    //  document.write("<h1> 올해는 "+ dday +"일 지났습니다.</h1>")
+
+        function printTime(){
+            var days = ["일", "월", "화","수","목","금","토"];
+
+        var mydate = new Date();
+
+   
+
+
+
+
+        // 시스템에서 가져오기
+
+        var yy = mydate.getFullYear();
+        var mm = mydate.getMonth()+1;
+        var dd = mydate.getDate();
+
+
+        var i = mydate.getDay();
+        var day = days[i];
+
+        var hh = mydate.getHours();
+        var mi = mydate.getMinutes();
+        var ss = mydate.getSeconds();
+
+        var result = yy + "-" + mm + "-" + dd+" "+ day +"요일 " + hh + ":" + mi + ":" + ss;
+
+        document.getElementById("timer").innerHTML = result;
+
+        }    
+
+        function startTimer(){
+            setInterval(printTime, 1000);
+        }
+
+
+    </script>
+</head>
+<body onload="startTimer()">
+    <h1 id="timer"></h1>
+</body>
+</html>

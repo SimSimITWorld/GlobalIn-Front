@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function open1(){
+            window.open('openEx.html');
+        }
+
+        function open2(){
+            // 스크롤바 = 스크롤에 대한 표시 여부, 툴바 = 위에 있는 툴 표시 여부, 메뉴바 = 파일,편집 등등 표시 여부, 스테튜스 = 상태바 표시 여부, 로케이션 = 주소표시줄 표시 여부
+            window.open('openEx.html', "",'width=300, height=500, scrollbars=no, toolbar=no, menubar=no, status=no, location=no'); 
+            
+        }
+
+        function open3(url){
+            window.open(url, 'mywin','openEx.html', "",'width=500, height=300, scrollbars=no, toolbar=no, menubar=no, status=no, location=no'); 
+        }
+
+    </script>
+</head>
+<body>
+    <h3> open 메소드 </h3>
+    <div>
+        <a href="#" onclick="open1()"> 새창 열기 </a>
+        <br>
+        <a href="#" onclick="open2()"> 팝업창 열기 </a>
+        <br>
+
+        <a href="#" onclick="open3('http://www.naver.com'); return false"> 팝업창 열기(파라미터를 포함한 함수호출) </a>
+        <br>
+        <a href="#" onclick="open3('http://www.daum.net'); return false"> 팝업창 열기(파라미터를 포함한 함수호출) </a>
+
+    </div>
+</body>
+</html>

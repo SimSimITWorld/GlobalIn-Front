@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <script>
+        function insertQuestion(){
+        // 내용을 입력받는 대화 상자
+        var q = prompt("사칙연산을 입력하세요.","");
+
+        // 입력받은 문자열을 수식으로 변환(eval)
+        var ans = eval(q);
+
+        var result = q +"="+ans;
+
+        // 출력
+        document.getElementById("question").innerHTML = result;
+        }
+
+    </script>
+</head>
+<body onload="insertQuestion()">
+    <h1 id="question"></h1>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 댓글 작성 </title>
+    <style>
+        input[type=text]{
+            color: red;
+        }
+        input:hover, textarea:hover{
+            background: aliceblue;
+        }
+        input[type=text]:focus,input[type=email]:focus{
+            font-size: 120%;
+        }
+
+        label{
+            display: block;
+            padding: 5px;
+        }
+
+        label span{
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>댓글작성</h3>
+    <hr>
+    <form>
+        <label>
+            <span>Name</span><input type="text" placeholder="GilDong">
+        </label>
+        <label>
+            <span>Email</span><input type="email" placeholder="GilDong@naver.com">
+        </label>
+        <label>
+            <span>Comment</span><textarea placeholder="메시지를 남겨주세요"></textarea>
+        </label>
+        <label>
+            <span></span><input type="submit" values="전송">
+        </label>
+    </form>
+</body>
+</html>

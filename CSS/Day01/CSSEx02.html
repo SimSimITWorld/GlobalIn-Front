@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Programming</title>
+    <style>
+        h2, li { color: brown;}  /* 태그 이름으로 적용 */
+        div > div > strong {background: yellow;} /* 자식 선택자일 때*/
+        ul strong {color: dodgerblue;} /* 자손 선택자일 때 */
+
+        /* =>> class 선택자일 때*/
+        .main {background: aliceblue;}
+
+        /* # ==>> id 선택자일 때 */
+        #list {background: mistyrose;}
+        
+        #list span {
+            color: forestgreen;
+        }
+
+        h2 ::first-letter {
+            color: red;
+        }
+
+        li:hover{
+            background: yellowgreen;
+        }
+
+        .warning{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body class="main">
+    <h2>Web Programming</h2>
+    <hr>
+    <div>
+        <div>IT 4기 <strong>학습내용</strong></div>
+        <ul id="list">
+            <li><span>HTML5</span></li>
+            <li><strong>CSS3</strong></li>
+            <li>JavaScript</li>
+            <li>JQueary</li>
+        </ul>
+        <div class="warning">평점 60점이하는 강제 탈락</div>
+    </div>
+</body>
+</html>

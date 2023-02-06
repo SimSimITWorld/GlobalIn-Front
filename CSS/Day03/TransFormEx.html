@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            padding: 5px;
+            color: white;
+            background: olivedrab;
+        }
+        .ro{transform: rotate(20deg);}
+        .sk{transform: skew(0deg,20deg);}
+        .tr{transform: translateY(100px);}
+        .sc{transform: scale(3,1);}
+
+        .ro:hover {transform: rotate(80deg);}/*마우스 올렸을 시*/
+        .sk:hover {transform: skew(0deg,-60deg);}
+        .tr:hover {transform: translate(50px,100px);}
+        .sc:hover {transform: scale(4,2);}
+
+        .sc:active {transform: scale(1,5);}/*클릭 시*/
+
+
+
+    </style>
+</head>
+<body>
+    <h3>Transform</h3>
+    회전 (rotate), 기울기(skew),
+    이동 (translate), 확대/축소(scale)
+    마우스 호버를 이용하여 변환시킴
+    <hr>
+    <div class="ro">rotate(20deg)</div>
+    <div class="sk">skew(0, -20deg)</div>
+    <div class="tr">translateY(100px)</div>
+    <div class="sc">scale(3,1)</div>
+
+
+
+</body>
+</html>

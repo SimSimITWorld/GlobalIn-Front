@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .thumbnail {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 120px;
+            float: left;
+        }
+
+        .thumbnail li{
+            width: 100px;
+            height: 100px;
+            padding: 5px 10px;
+        }
+
+        .thumbnail img{
+            width: 100px;
+            height: 100px;
+        }
+
+        .view {
+            width: 500px;
+            height: 320px;
+            padding: 5px;
+            float: left;
+        }
+
+        .view img {
+            width: 500px;
+            height: 320px;
+        }
+    </style>
+    <script>
+        function setImage(index){
+            var image_list = [ // 배열
+                '/IMG/춘식-춘식이.gif',
+                '/IMG/chunsik-춘식.gif',
+                '/IMG/chunsik-춘식 (1).gif'
+            ];
+
+            var image = document.getElementById('target');
+
+            image.src = image_list[index];
+        }
+    </script>
+</head>
+<body>
+    <ul class="thumbnail">
+        <li><a href="#" onclick="setImage(0); return false;"><img src="/IMG/춘식-춘식이.gif" alt="춘식아달려!"></a></li>
+        <li><a href="#" onclick="setImage(1); return false;"><img src="/IMG/chunsik-춘식.gif" alt="춘식아!!"></a></li>
+        <li><a href="#" onclick="setImage(2); return false;"><img src="/IMG/chunsik-춘식 (1).gif" alt="춘식아!뭐해!!!"></a></li>
+    </ul>
+    <div class="view">
+        <img src="/IMG/춘식-춘식이.gif" alt="달리는 춘식이" id="target">
+    </div>
+</body>
+</html>
